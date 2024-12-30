@@ -1,0 +1,59 @@
+{
+    "id": 1,
+    "service_id": 1,
+    "name": "Ron Helms",
+    "email": "ron@zarbyte.com",
+    "description": "Take your business to the next level with Zarbyte! Let's build something awesome together.\r\n\r\nPlease don't hesitate to reach out at any time.",
+    "title": "Developer",
+    "company": "Zarbyte",
+    "website": "https://zarbyte.com",
+    "address": "Waxahachie, TX",
+    "phone": "(248) ZARBYTE",
+    "linkedin": null,
+    "facebook": "Zarbyte",
+    "twitter": null,
+    "instagram": null,
+    "snapchat": null,
+    "tiktok": null,
+    "ebay": null,
+    "youtube": null,
+    "card_action": null,
+    "color_background": "#ffffff",
+    "color_text": "#555555",
+    "color_headings": "#444444",
+    "color_primary": "#0d6efd",
+    "color_secondary": "#6c757d",
+    "photo_avatar": "https://zdrc.developmentpreview.net/storage/cardavatars/7nLdWvhKQWyHZFLAiYBSjkRIWRnlNbckau549pFo.jpg",
+    "photo_cover": "https://zdrc.developmentpreview.net/storage/cardcovers/vTlrANT8xkzKMtxmktMWL0ShQsFon39qIbjNSgRO.png",
+    "photo_slides": null,
+    "branding": 1,
+    "buttons": [
+        {
+            "url": "https://zarbyte.com/services/smart-business-cards",
+            "title": "Smart Business Cards"
+        },
+        {
+            "url": "https://zarbyte.com/services/email-hosting",
+            "title": "Email Hosting"
+        },
+        {
+            "url": "https://zarbyte.com/services/website-development",
+            "title": "Website Development"
+        },
+        {
+            "url": "https://zarbyte.com/services/api-data-integration",
+            "title": "API / Data Integration"
+        },
+        {
+            "url": "https://zarbyte.com/services/technical-consulting",
+            "title": "IT Consulting"
+        }
+    ],
+    "uuid": "44d87fe5-a332-4dca-bd9a-96c42672e5b6",
+    "created_at": "2024-11-21 21:40:58",
+    "updated_at": "2024-11-21 21:50:54",
+    "slides": [],
+    "system_appointments": true,
+    "appointments": [],
+    "appointmentquestions": []
+}

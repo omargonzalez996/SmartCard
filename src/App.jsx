@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { getData } from './api/data';
-
 //offline data
 import offlinedata from '../data/offlinedata.json'
 
@@ -9,6 +8,7 @@ import Info from './components/Info';
 import ActionButtons from './components/ActionButtons';
 import Socials from './components/Socials';
 import Links from './components/Links';
+import AppointmentForm from './components/AppointmentForm';
 
 const photo_cover = '/cover.png';
 
@@ -16,6 +16,8 @@ function App() {
   const [data, setData] = useState(offlinedata)
   const [user, setUser] = useState(1)
   const [loading, setLoading] = useState(false)
+  const [openModal, setOpenModal] = useState(false)
+
 
   const fetchData = async () => {
     setLoading(true)
@@ -45,7 +47,7 @@ function App() {
             <Cover />
             <div className='relative bottom-16'>
               <Info data={data} />
-              <ActionButtons data={data} />
+              <ActionButtons data={data} setOpenModal={setOpenModal} />
               <div className="border-t border-gray-300 my-4 mx-5" />
               {/* DESCRIPTION */}
               <div className='m-10'>
@@ -64,6 +66,7 @@ function App() {
           <img src="https://dash.zarbyte.com/images/zarbyte-logo.png" alt="zarbyte logo" />
         </div>
       </div>
+      {openModal && <AppointmentForm openModal={setOpenModal} />}
     </>
   )
 }

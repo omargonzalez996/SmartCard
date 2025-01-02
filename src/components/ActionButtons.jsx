@@ -10,14 +10,14 @@ export default function ActionButtons({ data, setOpenModal }) {
 
     return (
         <div className='flex m-5 text-white justify-center items-center space-x-5'>
-            <button onClick={(e) => openModal(e)} className='flex bg-blue-700 p-3 rounded-xl w-1/2 text-sm justify-center shadow-lg max-w-[250px]'>
+            <button onClick={(e) => openModal(e)} className='flex bg-blue-700 p-3 rounded-xl w-1/2 text-xs justify-center items-center shadow-lg max-w-[250px]'>
                 <CalendarMonthIcon fontSize='small' />
                 <p className='mx-1'>Book Appointment</p>
             </button>
-            <div className='cursor-pointer flex bg-slate-900 p-3 rounded-xl w-1/2 text-sm justify-center shadow-lg max-w-[250px]'>
+            <a className='cursor-pointer flex bg-slate-900 p-3 rounded-xl w-1/2 text-xs justify-center items-center shadow-lg max-w-[250px]' href={`mailto:${data.email}`}>
                 <EmailIcon fontSize='small' />
                 <p className='mx-1'>Send an Email</p>
-            </div>
+            </a>
         </div>
     )
 }

@@ -37,7 +37,7 @@ function App() {
   // }, [])
 
   return (
-    <>
+    <div>
       <div className="flex items-center justify-center min-h-screen bg-slate-200">
         {loading ? (
           <p className="text-lg font-medium text-gray-600">Loading...</p>
@@ -67,7 +67,7 @@ function App() {
         </div>
       </div>
       {openModal && <AppointmentForm openModal={setOpenModal} />}
-    </>
+    </div>
   )
 }
 

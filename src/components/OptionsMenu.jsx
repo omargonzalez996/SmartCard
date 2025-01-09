@@ -22,7 +22,7 @@ export default function OptionsMenu({ setOpenQr, data }) {
   const handleDownload = (data) => {
     const vCard = new VCard();
 
-    vCard.set("n", [data.lastName || "", data.firstName || "", "", "", ""]);
+    vCard.set("n", data.name.split(" "));
     vCard.set("fn", data.name);
     vCard.set("org", data.company);
     vCard.set("email", data.email);

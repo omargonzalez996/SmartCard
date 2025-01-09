@@ -12,6 +12,9 @@ import Links from "./components/Links";
 import AppointmentForm from "./components/AppointmentForm";
 import QrModal from "./components/QrModal";
 
+import Alert from '@mui/material/Alert';
+import CheckIcon from '@mui/icons-material/Check';
+
 const photo_cover = "/cover.png";
 
 function App() {
@@ -20,7 +23,8 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [openModal, setOpenModal] = useState(false);
   const [openQr, setOpenQr] = useState(false);
-  
+  const [success, setSuccess] = useState(false);
+
   const fetchData = async () => {
     setLoading(true);
     try {
@@ -49,6 +53,9 @@ function App() {
             <div className="relative bottom-16">
               <Info data={data} />
               <ActionButtons data={data} setOpenModal={setOpenModal} />
+              {success && (<Alert icon={<CheckIcon fontSize="inherit" />} severity="success" onClose={() => setSuccess(false)} className="m-5">
+                Scheduled appointment
+              </Alert>)}
               <div className="border-t border-gray-300 my-4 mx-5" />
               {/* DESCRIPTION */}
               <div className="m-10">
@@ -72,7 +79,7 @@ function App() {
           />
         </div>
       </div>
-      {openModal && <AppointmentForm openModal={setOpenModal} />}
+      {openModal && <AppointmentForm openModal={setOpenModal} setSuccess={setSuccess} />}
       {openQr && <QrModal openModal={setOpenQr} data={data} />}
     </div>
   );
